@@ -1,0 +1,65 @@
+NovaMed Health – Vendor & Integration Assessment Document
+Document Version: 1.2 | Last Updated: December 2024
+
+1. INTEGRATION CAPABILITIES
+NovaMed provides a RESTful API (v3) and a FHIR R4-compliant API for healthcare data interoperability. Our integration catalogue includes:
+
+EHR/EMR Systems:
+- Epic MyChart (via Interconnect API)
+- Cerner Millennium (via SMART on FHIR)
+- Athenahealth (via REST API)
+- NextGen (custom HL7 v2.5 integration)
+- Allscripts (via direct database connector — deprecated, sunset Q2 2025)
+
+Insurance & Payer Integrations:
+- Availity (real-time eligibility verification)
+- Change Healthcare (claims submission and remittance)
+- UnitedHealth Group, Anthem, Humana, Aetna (direct payer portals)
+
+Third-party apps can authenticate using OAuth 2.0 (authorization code flow). Webhook support is available for real-time event notifications (e.g., new patient intake submitted, eligibility check completed). Rate limits: 1,000 API calls/minute per organisation on Growth plan; 10,000/minute on Enterprise.
+
+2. DATA PORTABILITY AND EXPORT
+Customers can export all their data in the following formats:
+- JSON (full data export via API)
+- CSV (administrative and billing records via dashboard)
+- FHIR R4 bundles (clinical data)
+- HL7 v2.5 messages (legacy EHR compatibility)
+
+Data exports are available on-demand from the Admin console. Full data exports are processed within 24 hours for accounts under 1 million records; up to 72 hours for larger datasets.
+
+3. VENDOR SECURITY ASSESSMENTS
+NovaMed completes vendor security questionnaires including:
+- VSAQ (Vendor Security Assessment Questionnaire) – responded within 5 business days
+- SIG Lite – responded within 7 business days
+- CAIQ (Consensus Assessments Initiative Questionnaire) for cloud security
+
+Our latest completed SIG Lite response is dated September 2024. We provide audit reports (SOC 2 Type II) under NDA for enterprise customers.
+
+4. SUBPROCESSOR CHANGE NOTIFICATION
+NovaMed will notify enterprise customers of any new or changed subprocessors with at least 30 days' notice via email to the designated security contact. Customers have the right to object to new subprocessors within the notification window. A complete and up-to-date subprocessor list is maintained at novamed.health/subprocessors.
+
+5. CUSTOMER RESPONSIBILITIES
+Customers are responsible for:
+- Configuring and enforcing MFA for their user accounts
+- Managing user provisioning and deprovisioning in a timely manner
+- Securing their own network connections to the NovaMed platform
+- Complying with applicable data privacy laws in their jurisdiction
+- Notifying NovaMed promptly of any suspected unauthorised access
+
+6. PENETRATION TEST RESULTS
+NovaMed's most recent third-party penetration test was conducted by Cobalt Security Labs in October 2024. The test covered web application, API, and internal network scope. Results:
+- 0 Critical findings
+- 2 High findings (both remediated within 7 days of report)
+- 5 Medium findings (4 remediated; 1 accepted risk with compensating control documented)
+- 11 Low/Informational findings
+
+An executive summary of the pentest report is available under NDA for enterprise security reviews.
+
+7. CONTRACTUAL PROTECTIONS
+NovaMed's Enterprise MSA includes:
+- Data Processing Agreement (DPA) with GDPR-aligned data processing terms
+- Business Associate Agreement (BAA) for HIPAA compliance
+- 99.99% uptime SLA with service credits (10% credit for each 0.1% below SLA threshold)
+- Right to audit clause: customers may conduct a security audit with 30 days' notice (or may accept SOC 2 Type II in lieu)
+- Termination for cause: customer may terminate immediately in the event of a material breach
+- Data return and deletion upon termination: within 30 days, at no additional cost

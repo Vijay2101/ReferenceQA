@@ -1,0 +1,35 @@
+NovaMed Health – Vendor Security & Compliance Questionnaire
+Submitted by: Regional Health Network – Procurement Team
+Date: March 2025
+
+Please answer the following questions based on your current platform capabilities and security posture.
+
+1. How is customer data encrypted at rest and in transit?
+
+2. What authentication methods does your platform support, including MFA and SSO options?
+
+3. Is your platform HIPAA compliant? Do you provide a Business Associate Agreement (BAA)?
+
+4. What is your guaranteed uptime SLA for enterprise customers?
+
+5. How frequently do you conduct penetration testing, and can you share the results?
+
+6. What is your incident response process in the event of a data breach involving PHI?
+
+7. What cloud infrastructure provider do you use, and in which geographic regions is data stored?
+
+8. What EHR systems does your platform integrate with?
+
+9. What are your Recovery Time Objective (RTO) and Recovery Point Objective (RPO)?
+
+10. Do you notify customers of new subprocessors, and how much notice is provided?
+
+11. What certifications does your platform currently hold (e.g., SOC 2, ISO 27001, HITRUST)?
+
+12. What data export formats do you support for portability?
+
+13. What is your process for handling customer data upon contract termination?
+
+14. Do you support custom data residency options for non-US customers?
+
+15. What employee security controls are in place, including background checks and training?

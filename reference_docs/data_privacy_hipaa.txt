@@ -1,0 +1,43 @@
+NovaMed Health – Data Privacy & HIPAA Compliance Overview
+Document Version: 1.8 | Last Updated: January 2025
+
+1. HIPAA COMPLIANCE POSTURE
+NovaMed Health operates as a HIPAA-covered Business Associate. We sign a Business Associate Agreement (BAA) with every healthcare provider customer prior to granting access to our platform. Our BAA is available for review during the sales process and is included as an addendum to our Master Service Agreement (MSA). We do not process any Protected Health Information (PHI) without a signed BAA in place.
+
+Our HIPAA compliance program is overseen by our Chief Privacy Officer (CPO), currently Dr. Priya Nair, who holds a Certified Information Privacy Professional (CIPP) credential. Annual internal HIPAA audits are conducted by our compliance team, and external audits are conducted every two years.
+
+2. TYPES OF DATA COLLECTED
+NovaMed collects and processes the following categories of data:
+- Patient intake data: name, DOB, gender, insurance ID, chief complaint
+- Clinical documentation: provider notes, diagnosis codes (ICD-10), procedure codes (CPT)
+- Administrative data: billing information, appointment schedules, referral records
+- Platform usage data: clickstream, session logs (no PHI included in analytics)
+
+NovaMed does NOT sell patient data or use PHI for advertising purposes. De-identified data may be used to improve platform features and train internal ML models, subject to the de-identification standards in 45 CFR §164.514.
+
+3. DATA SUBJECT RIGHTS
+Under applicable state and federal privacy laws, patients and customers may exercise the following rights:
+- Right to access their data
+- Right to correct inaccurate records
+- Right to request deletion (subject to HIPAA retention requirements)
+- Right to restrict processing
+- Right to data portability
+
+Requests must be submitted to privacy@novamed.health and are processed within 30 days. NovaMed does not honor deletion requests where retention is required by law (e.g., 7-year HIPAA retention requirement).
+
+4. DATA BREACH PROTOCOL
+In the event of a confirmed data breach involving PHI, NovaMed follows this protocol:
+a. Contain and investigate the breach within 24 hours
+b. Notify affected customers within 72 hours per HIPAA Breach Notification Rule
+c. If the breach affects 500+ individuals in a state, notify the HHS Office for Civil Rights within 60 days of discovery
+d. If individuals are affected, provide notification including description, types of information involved, and recommended steps
+e. For breaches affecting 500+ individuals, notify prominent media outlets in the affected states
+
+5. COOKIES AND TRACKING
+Our platform uses essential, functional, and analytics cookies. We do not use advertising or cross-site tracking cookies. Customers can manage cookie preferences through the settings panel in their account dashboard. Our platform complies with CCPA for California residents.
+
+6. INTERNATIONAL DATA TRANSFERS
+Data is not transferred outside the United States by default. Enterprise customers requiring EU or APAC hosting should contact our solutions team. NovaMed is currently assessing EU-US Data Privacy Framework certification for future European expansion.
+
+7. DATA MINIMIZATION
+NovaMed applies strict data minimization practices. Only data necessary to provide the contracted services is collected and processed. Integration partners receive access only to the data fields required for their specific function, governed by API scopes and RBAC policies.

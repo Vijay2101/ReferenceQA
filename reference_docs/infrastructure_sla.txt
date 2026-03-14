@@ -1,0 +1,58 @@
+NovaMed Health – Infrastructure, Availability & SLA Documentation
+Document Version: 3.1 | Last Updated: February 2025
+
+1. CLOUD INFRASTRUCTURE
+NovaMed's platform is hosted exclusively on Amazon Web Services (AWS). We utilise a multi-availability-zone (Multi-AZ) deployment architecture across US-East-1 (Northern Virginia) and US-West-2 (Oregon). Our infrastructure is provisioned and managed using Terraform (Infrastructure as Code). All production infrastructure changes go through a peer-reviewed pull request process and are applied via automated CI/CD pipelines.
+
+Key infrastructure components:
+- Compute: AWS EC2 (Auto Scaling Groups) + AWS ECS (Fargate) for containerized microservices
+- Database: AWS RDS (PostgreSQL, Multi-AZ with read replicas) + MongoDB Atlas for document storage
+- Storage: AWS S3 with server-side encryption (SSE-KMS) and versioning enabled
+- CDN: AWS CloudFront for static asset delivery
+- Networking: VPC with private subnets, NAT gateways, and AWS Shield Standard for DDoS protection
+- Secrets Management: AWS Secrets Manager for API keys and credentials
+
+2. UPTIME AND SLA
+NovaMed guarantees the following Service Level Agreements (SLAs) for production environments:
+
+| Tier       | Uptime SLA | Support Response Time (P1) |
+|------------|------------|----------------------------|
+| Starter    | 99.5%      | 8 business hours           |
+| Growth     | 99.9%      | 4 business hours           |
+| Enterprise | 99.99%     | 1 hour (24/7)              |
+
+Planned maintenance windows are scheduled on the 3rd Sunday of each month between 02:00–04:00 UTC and are announced 7 days in advance via our status page and email notifications.
+
+Uptime is measured on a rolling 30-day basis. Downtime does not include scheduled maintenance, force majeure events, or issues caused by customer's own infrastructure.
+
+3. DISASTER RECOVERY
+Recovery Point Objective (RPO): 1 hour
+Recovery Time Objective (RTO): 4 hours
+
+Database backups are taken every hour and retained for 35 days. Full daily snapshots are stored in a separate AWS account with cross-region replication. NovaMed conducts disaster recovery drills semi-annually (last drill: November 2024). Failover to the secondary region is automated via AWS Route 53 health checks.
+
+4. MONITORING AND ALERTING
+NovaMed operates a 24/7 Site Reliability Engineering (SRE) team. Monitoring is implemented using:
+- AWS CloudWatch for infrastructure metrics and log aggregation
+- Datadog for application performance monitoring (APM) and distributed tracing
+- PagerDuty for on-call alert routing and escalation
+- Custom dashboards for latency, error rates, and database query performance
+
+P1 alerts (e.g., service outage, error rate >5%) are automatically paged to the on-call engineer within 60 seconds.
+
+5. NETWORK SECURITY
+All inbound traffic is routed through AWS WAF (Web Application Firewall) with managed rule groups covering OWASP Top 10 vulnerabilities. Rate limiting is enforced at the API Gateway level. Internal service-to-service communication uses mutual TLS (mTLS). The production environment is isolated in a dedicated VPC; developer access requires VPN + MFA.
+
+6. CHANGE MANAGEMENT
+All production changes follow a Change Advisory Board (CAB) process:
+- Low-risk changes: approved asynchronously within 24 hours
+- Medium-risk changes: require one peer approval and a 24-hour bake period
+- High-risk changes: require CAB sign-off, a rollback plan, and a maintenance window
+
+Zero-downtime deployments are achieved via blue-green deployment strategy.
+
+7. CAPACITY PLANNING
+NovaMed performs quarterly capacity planning reviews. Auto-scaling is configured to handle up to 10x baseline traffic automatically. Load testing is performed before major feature releases using k6.
+
+8. VENDOR DEPENDENCIES
+Primary uptime risk is tied to AWS service availability. NovaMed monitors the AWS Service Health Dashboard and subscribes to SNS alerts for all services in use. Our architecture is designed to degrade gracefully in the event of single-service failures (e.g., S3 outage does not affect core clinical workflows).

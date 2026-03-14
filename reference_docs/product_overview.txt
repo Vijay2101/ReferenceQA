@@ -1,0 +1,72 @@
+NovaMed Health – Product Overview & Pricing
+Document Version: 2.0 | Last Updated: March 2025
+
+1. PRODUCT DESCRIPTION
+NovaMed Health is a cloud-based SaaS platform serving mid-size hospitals (50–500 beds) and outpatient clinics. The platform consists of four core modules:
+
+Module 1 – Patient Intake Manager
+Digitizes the patient check-in process. Patients receive a pre-visit link to complete intake forms on any device. Supports English and Spanish by default; additional languages available on request. Captures demographics, insurance information, consent forms, and chief complaint. Reduces average intake time from 18 minutes to under 5 minutes.
+
+Module 2 – Insurance Eligibility Verifier
+Performs real-time eligibility checks with 900+ payers via Availity and direct payer integrations. Returns benefit details, copay, deductible status, and prior authorisation requirements within 8 seconds. Reduces eligibility-related claim denials by an average of 43% (based on customer cohort data, FY2024).
+
+Module 3 – Clinical Documentation Suite
+AI-assisted clinical note generation using ambient voice capture. Supports SOAP notes, discharge summaries, and referral letters. Integrates with Epic, Cerner, and Athenahealth. Documentation is auto-coded with ICD-10 and CPT codes using our proprietary NovaMed ClinicalAI model.
+
+Module 4 – Billing Workflow Manager
+End-to-end claims management: charge capture, claim scrubbing, submission to payers, and remittance reconciliation. Integrated with Change Healthcare for clearinghouse services. Average first-pass claim acceptance rate across customer base: 96.2%.
+
+2. PRICING TIERS
+All prices are per-provider, per-month (billed annually):
+
+Starter Plan – $199/provider/month
+- Up to 10 providers
+- Patient Intake Manager
+- Insurance Eligibility Verifier (up to 2,000 checks/month)
+- Email support
+- 99.5% uptime SLA
+
+Growth Plan – $349/provider/month
+- Up to 50 providers
+- All Starter features
+- Clinical Documentation Suite
+- 5,000 eligibility checks/month
+- Phone + email support
+- 99.9% uptime SLA
+- SSO (SAML 2.0) included
+
+Enterprise Plan – Custom pricing
+- Unlimited providers
+- All Growth features
+- Billing Workflow Manager
+- Custom EHR integrations
+- Dedicated Customer Success Manager
+- 99.99% uptime SLA
+- Custom data residency options
+- Right-to-audit clause
+- White-labelling available
+
+3. FREE TRIAL AND ONBOARDING
+NovaMed offers a 30-day free trial for Starter and Growth plans. No credit card required. Trial accounts include full feature access with a limit of 50 patient intake submissions. Dedicated onboarding is included for Growth and Enterprise customers. Average onboarding time: 14 days for Growth; 30–60 days for Enterprise.
+
+4. CUSTOMER SUCCESS AND SUPPORT
+- Starter: email support, response within 8 business hours
+- Growth: phone + email, response within 4 business hours
+- Enterprise: dedicated CSM, 1-hour response for P1 issues (24/7)
+- All plans include access to the NovaMed Help Center and community forum
+- System status is published at status.novamed.health
+
+5. TRAINING AND DOCUMENTATION
+NovaMed provides:
+- Interactive in-app walkthroughs
+- Video tutorial library (100+ videos)
+- API documentation at docs.novamed.health/api
+- FHIR implementation guide
+- Admin certification course (2 hours, self-paced)
+- Optional on-site training for Enterprise customers ($2,500/day)
+
+6. ROADMAP HIGHLIGHTS (2025)
+Q2 2025: ISO 27001 certification completion
+Q2 2025: Mobile app for patient intake (iOS and Android)
+Q3 2025: EU data residency launch
+Q4 2025: NovaMed ClinicalAI v2.0 with specialty-specific documentation templates

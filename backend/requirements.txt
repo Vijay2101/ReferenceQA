@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+pymongo
+python-jose[cryptography]
+passlib[bcrypt]
+python-multipart
+python-dotenv
+groq
+google-genai
+faiss-cpu
+numpy
+python-docx
+pdfplumber
+openpyxl
+httpx
